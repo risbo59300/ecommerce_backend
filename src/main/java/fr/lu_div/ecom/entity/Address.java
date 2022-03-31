@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Table(name = "address")
 public class Address {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -34,6 +34,5 @@ public class Address {
     @OneToOne
     @PrimaryKeyJoinColumn
     private Order order;
-
 
 }

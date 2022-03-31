@@ -7,11 +7,13 @@ import fr.lu_div.ecom.entity.Customer;
 import fr.lu_div.ecom.entity.Order;
 import fr.lu_div.ecom.entity.OrderItem;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.Set;
 import java.util.UUID;
 
+@Service
 public class CheckoutServiceImpl implements CheckoutService{
 
     @Autowired

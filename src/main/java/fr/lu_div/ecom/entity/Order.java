@@ -15,7 +15,7 @@ import java.util.*;
 @Table(name = "orders")
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -39,7 +39,7 @@ public class Order {
     @UpdateTimestamp
     private Date lastUpdated;
 
-    @OneToMany(mappedBy = "orderItems", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private Set<OrderItem> orderItems = new HashSet<>();
 
     @ManyToOne
